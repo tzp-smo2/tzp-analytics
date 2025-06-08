@@ -3,7 +3,7 @@ import importlib
 
 st.set_page_config(page_title="TZP Analyse", layout="wide")
 
-st.image("assets/logo_tzp.jpg", width=80)
+st.image("logo_tzp.png", width=80)
 st.title("Training Zone Performance – Outils d'analyse")
 
 sport = st.selectbox("Choisissez votre sport :", ["Cyclisme"])
