@@ -41,3 +41,21 @@ def main():
 
         fig.tight_layout()
         st.pyplot(fig)
+
+        # Résultats
+        st.subheader("Résultats")
+
+        puissance_30s = df[(df["Temps"] >= 0) & (df["Temps"] <= 30)]["Puissance"]
+        smO2_30s = df[(df["Temps"] >= 0) & (df["Temps"] <= 30)]["SmO2"]
+
+        resultats = {
+            "Puissance max (W)": puissance_30s.max(),
+            "Puissance moyenne (W)": puissance_30s.mean(),
+            "Puissance min (W)": puissance_30s.min(),
+            "SmO₂ min (%)": smO2_30s.min(),
+            "SmO₂ max (%)": sm_max,
+            "Temps du SmO₂ max (s)": max_time
+        }
+
+        result_df = pd.DataFrame.from_dict(resultats, orient='index', columns=["Valeur"])
+        st.dataframe(result_df)
