@@ -10,7 +10,7 @@ sport = st.selectbox("Choisissez votre sport :", ["Cyclisme"])
 
 tests = {
     "Cyclisme": {
-        "Test all-out 30s (Wingate)": "pages.Cyclisme.Test_Wingate",
+        "Test all-out 30s (Wingate)": "pages.Cyclisme.Test_Wingate_v5",
         "Test d'effort dynamique (SmO₂)": "pages.Cyclisme.Test_Smo2_Dynamique"
     }
 }
