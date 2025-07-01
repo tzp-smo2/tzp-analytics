@@ -58,7 +58,7 @@ def main():
         fig, ax1 = plt.subplots(figsize=(10, 5))
         ax1.plot(df["Temps"], df["SmO2"], label="SmO₂ (%)", color='blue')
         ax2 = ax1.twinx()
-        ax2.plot(df["Temps"], df["Puissance"], label="Puissance (W)", color='red', linestyle='--')
+        ax2.plot(df["Temps"], df["Puissance"], label="Puissance (W)", color='red')
 
         ax1.axvspan(0, t1, color='lightgreen', alpha=0.3, label='Zone T1 (vert)')
         ax1.axvspan(t1, t2, color='khaki', alpha=0.3, label='Zone T2 (jaune)')
